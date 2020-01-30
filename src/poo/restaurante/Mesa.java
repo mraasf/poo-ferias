@@ -75,4 +75,7 @@ public class Mesa {
     public void setNumeroMesa(Integer numeroMesa) {
         this.numeroMesa = numeroMesa;
     }
+
+    public void setEstaOcupado(boolean b) {     this.estaLivre = estaLivre;
+    }
 }

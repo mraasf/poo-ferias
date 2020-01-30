@@ -1,6 +1,6 @@
 package poo.restaurante;
 
-public class FachadaComanda {
+public class FachadaComanda { //
     private String garcom;
     private String pedido;
     private Double valor;

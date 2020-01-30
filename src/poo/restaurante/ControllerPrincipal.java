@@ -47,7 +47,7 @@ public class ControllerPrincipal {
 
 
     @FXML
-    private Button botaoDesocuparMesa; // botao para adicionar o desconto
+    private Button botaoDesocuparMesa; //
 
     @FXML
     private Button botaoAbrirMesa; // abre a mesa
@@ -136,17 +136,18 @@ public class ControllerPrincipal {
     void desocupar(ActionEvent event){
         Mesa m = listViewOcupadas.getSelectionModel().getSelectedItem() ; // cria um objeto mesa m
         if (m == null) return;
-        m.setEstaLivre();// seta m como livre
+        m.setEstaLivre(true);// seta m como livre
         listViewLivres.getItems().add(m);
         listViewOcupadas.getItems().remove(m); // remove m das mesas ocupadas
 
 
     }
     // ocupa uma mesa
+    @FXML
     void ocupar(ActionEvent event){
         Mesa m = listViewOcupadas.getSelectionModel().getSelectedItem() ;
         if (m == null) return;
-        m.setEstaOcupado(); //seta m como ocupada
+        m.setEstaOcupado(true); //seta m como ocupada
         listViewOcupadas.getItems().add(m);
         listViewLivres.getItems().remove(m); // remove m das mesas livres
 
